@@ -19,10 +19,16 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)showShareAction:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"https://github.com"];
+    
+    NSArray *activity = @[];
+    NSArray *activityItems = @[url];
+    
+    UIActivityViewController *vc = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:activity];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
 }
 
 
