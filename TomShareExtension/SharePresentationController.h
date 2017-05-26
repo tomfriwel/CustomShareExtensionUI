@@ -10,4 +10,6 @@
 
 @interface SharePresentationController : UIPresentationController
 
+@property (nonatomic, copy) void(^tapContainerBlcok)(void);
+
 @end

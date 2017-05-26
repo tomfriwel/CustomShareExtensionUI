@@ -20,20 +20,7 @@
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="wbc-yd-nQP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1k-Ay-V4R">
-                                <rect key="frame" x="161.5" y="318.5" width="52" height="30"/>
-                                <state key="normal" title="dismiss"/>
-                                <connections>
-                                    <action selector="dismissAction:" destination="j1y-V4-xli" eventType="touchUpInside" id="BNU-E5-rPV"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="e1k-Ay-V4R" firstAttribute="centerX" secondItem="wbc-yd-nQP" secondAttribute="centerX" id="LY7-Xs-p5b"/>
-                            <constraint firstItem="e1k-Ay-V4R" firstAttribute="centerY" secondItem="wbc-yd-nQP" secondAttribute="centerY" id="W34-AO-rZm"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DoH-dJ-e7E"/>
                 </viewController>
@@ -68,8 +55,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R30-jc-U5c">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FDG-cm-CbH"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="et0-HD-sF7"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FDG-cm-CbH">
+                            <connections>
+                                <action selector="cancelAction:" destination="Hef-aT-NdK" id="W3B-ct-LHP"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="et0-HD-sF7">
+                            <connections>
+                                <action selector="doneAction:" destination="Hef-aT-NdK" id="OhD-pW-8Da"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nW-on-OHi" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -16,8 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.preferredContentSize = CGSizeMake(100, 100);
+}
+
+- (IBAction)cancelAction:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    if (self.cancelBlcok) {
+        self.cancelBlcok();
+    }
+}
+
+- (IBAction)doneAction:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    if (self.doneBlcok) {
+        self.doneBlcok();
+    }
 }
 
 @end

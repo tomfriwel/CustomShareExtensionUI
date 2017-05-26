@@ -7,7 +7,7 @@
 //
 
 #import "ShareExtensionViewController.h"
-//#import "SheetViewController.h"
+#import "SheetViewController.h"
 #import "SharePresentationController.h"
 
 @interface ShareExtensionViewController () <UIViewControllerTransitioningDelegate>
@@ -25,11 +25,21 @@
     //    [self addSheetView];
     [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissAction:)]];
 
-    UIViewController *vc = [[UIStoryboard storyboardWithName:@"MainInterface" bundle:nil] instantiateViewControllerWithIdentifier:@"BottomSheetNavigationController"];
-    vc.transitioningDelegate = self;
-    vc.modalPresentationStyle = UIModalPresentationCustom;
+    SheetViewController *vc = [[UIStoryboard storyboardWithName:@"MainInterface" bundle:nil] instantiateViewControllerWithIdentifier:@"SheetViewController"];
     
-    [self presentViewController:vc animated:YES completion:nil];
+    __weak typeof(self) weakSelf = self;
+    [vc setCancelBlcok:^{
+        [weakSelf dismissAction:nil];
+    }];
+    [vc setDoneBlcok:^{
+        [weakSelf dismissAction:nil];
+    }];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    nav.transitioningDelegate = self;
+    nav.modalPresentationStyle = UIModalPresentationCustom;
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -44,8 +54,10 @@
 }
 
 - (IBAction)dismissAction:(id)sender {
+    
     [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:1.0 initialSpringVelocity:0.0 options:UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionCurveLinear  animations:^{
-        self.view.transform = CGAffineTransformMakeTranslation(0, self.view.frame.size.height);
+        self.blurView.alpha = 0;
+//        self.view.transform = CGAffineTransformMakeTranslation(0, self.view.frame.size.height);
     } completion:^(BOOL finished) {
         [self.extensionContext completeRequestReturningItems:nil completionHandler:nil];
     }];
@@ -83,7 +95,13 @@
 #pragma mark - UIViewControllerTransitioningDelegate
 
 -(UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source {
-    return [[SharePresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
+    SharePresentationController *presentation = [[SharePresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
+    
+    __weak typeof(self) weakSelf = self;
+    [presentation setTapContainerBlcok:^{
+        [weakSelf dismissAction:nil];
+    }];
+    return presentation;
 }
 
 

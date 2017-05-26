@@ -10,4 +10,7 @@
 
 @interface SheetViewController : UIViewController
 
+@property (nonatomic, copy) void(^cancelBlcok)(void);
+@property (nonatomic, copy) void(^doneBlcok)(void);
+
 @end
