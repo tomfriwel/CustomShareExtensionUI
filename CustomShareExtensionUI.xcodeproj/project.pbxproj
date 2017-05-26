@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CF33D6B01ED7C19C00C70285 /* ShareExtensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33D6AF1ED7C19C00C70285 /* ShareExtensionViewController.m */; };
+		CF33D6B31ED7CD7800C70285 /* SheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33D6B21ED7CD7800C70285 /* SheetViewController.m */; };
+		CF33D6BB1ED7F74100C70285 /* SharePresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33D6BA1ED7F74100C70285 /* SharePresentationController.m */; };
 		CFEBA4E51ED5729D00FA4CDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEBA4E41ED5729D00FA4CDE /* main.m */; };
 		CFEBA4E81ED5729D00FA4CDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEBA4E71ED5729D00FA4CDE /* AppDelegate.m */; };
 		CFEBA4EB1ED5729D00FA4CDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEBA4EA1ED5729D00FA4CDE /* ViewController.m */; };
@@ -62,6 +64,10 @@
 /* Begin PBXFileReference section */
 		CF33D6AE1ED7C19C00C70285 /* ShareExtensionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareExtensionViewController.h; sourceTree = "<group>"; };
 		CF33D6AF1ED7C19C00C70285 /* ShareExtensionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareExtensionViewController.m; sourceTree = "<group>"; };
+		CF33D6B11ED7CD7800C70285 /* SheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SheetViewController.h; sourceTree = "<group>"; };
+		CF33D6B21ED7CD7800C70285 /* SheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SheetViewController.m; sourceTree = "<group>"; };
+		CF33D6B91ED7F74100C70285 /* SharePresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharePresentationController.h; sourceTree = "<group>"; };
+		CF33D6BA1ED7F74100C70285 /* SharePresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharePresentationController.m; sourceTree = "<group>"; };
 		CFEBA4E01ED5729D00FA4CDE /* CustomShareExtensionUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomShareExtensionUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFEBA4E41ED5729D00FA4CDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CFEBA4E61ED5729D00FA4CDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -184,8 +190,12 @@
 		CFEBA51B1ED572E700FA4CDE /* TomShareExtension */ = {
 			isa = PBXGroup;
 			children = (
+				CF33D6B91ED7F74100C70285 /* SharePresentationController.h */,
+				CF33D6BA1ED7F74100C70285 /* SharePresentationController.m */,
 				CF33D6AE1ED7C19C00C70285 /* ShareExtensionViewController.h */,
 				CF33D6AF1ED7C19C00C70285 /* ShareExtensionViewController.m */,
+				CF33D6B11ED7CD7800C70285 /* SheetViewController.h */,
+				CF33D6B21ED7CD7800C70285 /* SheetViewController.m */,
 				CFEBA51F1ED572E700FA4CDE /* MainInterface.storyboard */,
 				CFEBA51C1ED572E700FA4CDE /* ShareViewController.h */,
 				CFEBA51D1ED572E700FA4CDE /* ShareViewController.m */,
@@ -389,8 +399,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF33D6B31ED7CD7800C70285 /* SheetViewController.m in Sources */,
 				CF33D6B01ED7C19C00C70285 /* ShareExtensionViewController.m in Sources */,
 				CFEBA51E1ED572E700FA4CDE /* ShareViewController.m in Sources */,
+				CF33D6BB1ED7F74100C70285 /* SharePresentationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

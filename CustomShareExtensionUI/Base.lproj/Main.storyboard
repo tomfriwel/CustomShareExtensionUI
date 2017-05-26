@@ -21,9 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="FC9-DX-xKG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="im8-Gf-8CP">
                                 <rect key="frame" x="146" y="318.5" width="82" height="30"/>
-                                <state key="normal" title="Show Share"/>
+                                <state key="normal" title="Show Share">
+                                    <color key="titleColor" red="0.16343858506944445" green="1" blue="0.19550238715277779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="showShareAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ow-Xb-5DK"/>
                                 </connections>
@@ -31,6 +36,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FC9-DX-xKG" secondAttribute="trailing" id="8SI-OH-Dle"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FC9-DX-xKG" secondAttribute="bottom" id="Dsf-Qc-akI"/>
+                            <constraint firstItem="FC9-DX-xKG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZU9-Ln-VRD"/>
+                            <constraint firstItem="FC9-DX-xKG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="a8c-cB-NRW"/>
                             <constraint firstItem="im8-Gf-8CP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bTB-cZ-Ix3"/>
                             <constraint firstItem="im8-Gf-8CP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="epb-qA-HLb"/>
                         </constraints>
@@ -38,6 +47,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="41.829085457271368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="test" width="460" height="460"/>
+    </resources>
 </document>

@@ -29,15 +29,88 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="e1k-Ay-V4R" firstAttribute="centerX" secondItem="wbc-yd-nQP" secondAttribute="centerX" id="LY7-Xs-p5b"/>
                             <constraint firstItem="e1k-Ay-V4R" firstAttribute="centerY" secondItem="wbc-yd-nQP" secondAttribute="centerY" id="W34-AO-rZm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DoH-dJ-e7E"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEy-Cv-SGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="41.829085457271368"/>
+        </scene>
+        <!--Sheet View Controller-->
+        <scene sceneID="nBc-99-tX7">
+            <objects>
+                <viewController storyboardIdentifier="SheetViewController" id="Hef-aT-NdK" customClass="SheetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wat-lv-qyE"/>
+                        <viewControllerLayoutGuide type="bottom" id="c4V-ho-UfU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oPY-Sb-MCL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzf-q2-uXL">
+                                <rect key="frame" x="169" y="318.5" width="37" height="30"/>
+                                <state key="normal" title="show"/>
+                                <connections>
+                                    <segue destination="rgA-el-3hB" kind="show" id="zdV-sI-Nfw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69552951388888884" green="0.782470703125" blue="0.85584852430555558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dzf-q2-uXL" firstAttribute="centerX" secondItem="oPY-Sb-MCL" secondAttribute="centerX" id="lX8-oO-BuT"/>
+                            <constraint firstItem="dzf-q2-uXL" firstAttribute="centerY" secondItem="oPY-Sb-MCL" secondAttribute="centerY" id="s3d-cL-6lD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="R30-jc-U5c">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FDG-cm-CbH"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="et0-HD-sF7"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7nW-on-OHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2711.1999999999998" y="41.829085457271368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yNs-rY-sQg">
+            <objects>
+                <viewController id="rgA-el-3hB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fVy-rR-ZXw"/>
+                        <viewControllerLayoutGuide type="bottom" id="IFe-E0-VPv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xht-cJ-U9O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdg-cp-5zB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3561" y="42"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vpa-ug-LrF">
+            <objects>
+                <navigationController storyboardIdentifier="BottomSheetNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="DYG-gq-Ntr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e8O-Cw-gB5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hef-aT-NdK" kind="relationship" relationship="rootViewController" id="uvA-Vp-Sxg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSb-z7-L1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="41.829085457271368"/>
         </scene>
     </scenes>
 </document>

@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    
+    gradient.frame = self.view.bounds;
+    gradient.colors = @[(id)[UIColor colorWithRed:0.59 green:0.87 blue:0.99 alpha:1.00].CGColor, (id)[UIColor colorWithRed:0.33 green:0.84 blue:0.41 alpha:1.00].CGColor];
+    
+    [self.view.layer insertSublayer:gradient atIndex:0];
 }
 
 - (IBAction)showShareAction:(id)sender {
