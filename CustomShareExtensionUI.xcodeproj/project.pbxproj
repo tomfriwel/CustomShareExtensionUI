@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF33D6B01ED7C19C00C70285 /* ShareExtensionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF33D6AF1ED7C19C00C70285 /* ShareExtensionViewController.m */; };
 		CFEBA4E51ED5729D00FA4CDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEBA4E41ED5729D00FA4CDE /* main.m */; };
 		CFEBA4E81ED5729D00FA4CDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEBA4E71ED5729D00FA4CDE /* AppDelegate.m */; };
 		CFEBA4EB1ED5729D00FA4CDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEBA4EA1ED5729D00FA4CDE /* ViewController.m */; };
@@ -15,6 +16,9 @@
 		CFEBA4F31ED5729D00FA4CDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEBA4F11ED5729D00FA4CDE /* LaunchScreen.storyboard */; };
 		CFEBA4FE1ED5729E00FA4CDE /* CustomShareExtensionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEBA4FD1ED5729E00FA4CDE /* CustomShareExtensionUITests.m */; };
 		CFEBA5091ED5729E00FA4CDE /* CustomShareExtensionUIUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEBA5081ED5729E00FA4CDE /* CustomShareExtensionUIUITests.m */; };
+		CFEBA51E1ED572E700FA4CDE /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEBA51D1ED572E700FA4CDE /* ShareViewController.m */; };
+		CFEBA5211ED572E700FA4CDE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFEBA51F1ED572E700FA4CDE /* MainInterface.storyboard */; };
+		CFEBA5251ED572E700FA4CDE /* TomShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CFEBA51A1ED572E700FA4CDE /* TomShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,9 +36,32 @@
 			remoteGlobalIDString = CFEBA4DF1ED5729D00FA4CDE;
 			remoteInfo = CustomShareExtensionUI;
 		};
+		CFEBA5231ED572E700FA4CDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFEBA4D81ED5729D00FA4CDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFEBA5191ED572E700FA4CDE;
+			remoteInfo = TomShareExtension;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CFEBA5291ED572E800FA4CDE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CFEBA5251ED572E700FA4CDE /* TomShareExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CF33D6AE1ED7C19C00C70285 /* ShareExtensionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareExtensionViewController.h; sourceTree = "<group>"; };
+		CF33D6AF1ED7C19C00C70285 /* ShareExtensionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareExtensionViewController.m; sourceTree = "<group>"; };
 		CFEBA4E01ED5729D00FA4CDE /* CustomShareExtensionUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomShareExtensionUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFEBA4E41ED5729D00FA4CDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CFEBA4E61ED5729D00FA4CDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +78,11 @@
 		CFEBA5041ED5729E00FA4CDE /* CustomShareExtensionUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomShareExtensionUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFEBA5081ED5729E00FA4CDE /* CustomShareExtensionUIUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomShareExtensionUIUITests.m; sourceTree = "<group>"; };
 		CFEBA50A1ED5729E00FA4CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFEBA51A1ED572E700FA4CDE /* TomShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TomShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFEBA51C1ED572E700FA4CDE /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		CFEBA51D1ED572E700FA4CDE /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		CFEBA5201ED572E700FA4CDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		CFEBA5221ED572E700FA4CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +107,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CFEBA5171ED572E700FA4CDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +123,7 @@
 				CFEBA4E21ED5729D00FA4CDE /* CustomShareExtensionUI */,
 				CFEBA4FC1ED5729E00FA4CDE /* CustomShareExtensionUITests */,
 				CFEBA5071ED5729E00FA4CDE /* CustomShareExtensionUIUITests */,
+				CFEBA51B1ED572E700FA4CDE /* TomShareExtension */,
 				CFEBA4E11ED5729D00FA4CDE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +134,7 @@
 				CFEBA4E01ED5729D00FA4CDE /* CustomShareExtensionUI.app */,
 				CFEBA4F91ED5729E00FA4CDE /* CustomShareExtensionUITests.xctest */,
 				CFEBA5041ED5729E00FA4CDE /* CustomShareExtensionUIUITests.xctest */,
+				CFEBA51A1ED572E700FA4CDE /* TomShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +181,19 @@
 			path = CustomShareExtensionUIUITests;
 			sourceTree = "<group>";
 		};
+		CFEBA51B1ED572E700FA4CDE /* TomShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				CF33D6AE1ED7C19C00C70285 /* ShareExtensionViewController.h */,
+				CF33D6AF1ED7C19C00C70285 /* ShareExtensionViewController.m */,
+				CFEBA51F1ED572E700FA4CDE /* MainInterface.storyboard */,
+				CFEBA51C1ED572E700FA4CDE /* ShareViewController.h */,
+				CFEBA51D1ED572E700FA4CDE /* ShareViewController.m */,
+				CFEBA5221ED572E700FA4CDE /* Info.plist */,
+			);
+			path = TomShareExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,10 +204,12 @@
 				CFEBA4DC1ED5729D00FA4CDE /* Sources */,
 				CFEBA4DD1ED5729D00FA4CDE /* Frameworks */,
 				CFEBA4DE1ED5729D00FA4CDE /* Resources */,
+				CFEBA5291ED572E800FA4CDE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CFEBA5241ED572E700FA4CDE /* PBXTargetDependency */,
 			);
 			name = CustomShareExtensionUI;
 			productName = CustomShareExtensionUI;
@@ -196,6 +252,23 @@
 			productReference = CFEBA5041ED5729E00FA4CDE /* CustomShareExtensionUIUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		CFEBA5191ED572E700FA4CDE /* TomShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFEBA5261ED572E800FA4CDE /* Build configuration list for PBXNativeTarget "TomShareExtension" */;
+			buildPhases = (
+				CFEBA5161ED572E700FA4CDE /* Sources */,
+				CFEBA5171ED572E700FA4CDE /* Frameworks */,
+				CFEBA5181ED572E700FA4CDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TomShareExtension;
+			productName = TomShareExtension;
+			productReference = CFEBA51A1ED572E700FA4CDE /* TomShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,7 +280,7 @@
 				TargetAttributes = {
 					CFEBA4DF1ED5729D00FA4CDE = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 8SJXRJ78CW;
+						DevelopmentTeam = T5EW9858SB;
 						ProvisioningStyle = Automatic;
 					};
 					CFEBA4F81ED5729E00FA4CDE = {
@@ -221,6 +294,11 @@
 						DevelopmentTeam = 8SJXRJ78CW;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CFEBA4DF1ED5729D00FA4CDE;
+					};
+					CFEBA5191ED572E700FA4CDE = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = T5EW9858SB;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -240,6 +318,7 @@
 				CFEBA4DF1ED5729D00FA4CDE /* CustomShareExtensionUI */,
 				CFEBA4F81ED5729E00FA4CDE /* CustomShareExtensionUITests */,
 				CFEBA5031ED5729E00FA4CDE /* CustomShareExtensionUIUITests */,
+				CFEBA5191ED572E700FA4CDE /* TomShareExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -266,6 +345,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFEBA5181ED572E700FA4CDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFEBA5211ED572E700FA4CDE /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +385,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CFEBA5161ED572E700FA4CDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF33D6B01ED7C19C00C70285 /* ShareExtensionViewController.m in Sources */,
+				CFEBA51E1ED572E700FA4CDE /* ShareViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -310,6 +406,11 @@
 			isa = PBXTargetDependency;
 			target = CFEBA4DF1ED5729D00FA4CDE /* CustomShareExtensionUI */;
 			targetProxy = CFEBA5051ED5729E00FA4CDE /* PBXContainerItemProxy */;
+		};
+		CFEBA5241ED572E700FA4CDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFEBA5191ED572E700FA4CDE /* TomShareExtension */;
+			targetProxy = CFEBA5231ED572E700FA4CDE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -328,6 +429,14 @@
 				CFEBA4F21ED5729D00FA4CDE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CFEBA51F1ED572E700FA4CDE /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFEBA5201ED572E700FA4CDE /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -427,7 +536,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8SJXRJ78CW;
+				DEVELOPMENT_TEAM = T5EW9858SB;
 				INFOPLIST_FILE = CustomShareExtensionUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tomfriwel.com.CustomShareExtensionUI;
@@ -439,7 +548,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8SJXRJ78CW;
+				DEVELOPMENT_TEAM = T5EW9858SB;
 				INFOPLIST_FILE = CustomShareExtensionUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tomfriwel.com.CustomShareExtensionUI;
@@ -497,6 +606,30 @@
 			};
 			name = Release;
 		};
+		CFEBA5271ED572E800FA4CDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = T5EW9858SB;
+				INFOPLIST_FILE = TomShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tomfriwel.com.CustomShareExtensionUI.TomShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CFEBA5281ED572E800FA4CDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = T5EW9858SB;
+				INFOPLIST_FILE = TomShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tomfriwel.com.CustomShareExtensionUI.TomShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -516,6 +649,7 @@
 				CFEBA50F1ED5729E00FA4CDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFEBA5101ED5729E00FA4CDE /* Build configuration list for PBXNativeTarget "CustomShareExtensionUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +658,7 @@
 				CFEBA5121ED5729E00FA4CDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFEBA5131ED5729E00FA4CDE /* Build configuration list for PBXNativeTarget "CustomShareExtensionUIUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +667,16 @@
 				CFEBA5151ED5729E00FA4CDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFEBA5261ED572E800FA4CDE /* Build configuration list for PBXNativeTarget "TomShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFEBA5271ED572E800FA4CDE /* Debug */,
+				CFEBA5281ED572E800FA4CDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
