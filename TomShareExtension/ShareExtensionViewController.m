@@ -40,6 +40,10 @@
     nav.transitioningDelegate = self;
     nav.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:nav animated:YES completion:nil];
+    
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self dealData];
+//    });
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -63,6 +67,45 @@
     }];
 }
 
+#pragma mark - 
+
+-(void)dealData {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        __block BOOL hasExistsUrl = NO;
+        static NSString *identifier = @"public.data";
+        [self.extensionContext.inputItems enumerateObjectsUsingBlock:^(NSExtensionItem * _Nonnull extItem, NSUInteger idx, BOOL * _Nonnull stop) {
+            [extItem.attachments enumerateObjectsUsingBlock:^(NSItemProvider * _Nonnull itemProvider, NSUInteger idx, BOOL * _Nonnull stop) {
+                NSLog(@"registeredTypeIdentifiers:%@", itemProvider.registeredTypeIdentifiers);
+                if ([itemProvider hasItemConformingToTypeIdentifier:identifier]) {
+                    [itemProvider loadItemForTypeIdentifier:identifier options:nil completionHandler:^(id<NSSecureCoding>  _Nullable item, NSError * _Null_unspecified error) {
+                        NSLog(@"itemclass = %@", NSStringFromClass([(NSObject *)item class]));
+                        NSLog(@"item = %@", item);
+                        if ([(NSObject *)item isKindOfClass:[NSURL class]]) {
+                            NSLog(@"分享的URL = %@", item);
+                        }
+                    }];
+                    
+                    [itemProvider loadPreviewImageWithOptions:nil completionHandler:^(id<NSSecureCoding>  _Nullable item, NSError * _Null_unspecified error) {
+                        if ([(NSObject *)item isKindOfClass:[UIImage class]]) {
+                            //                        self.imageView.image = (UIImage *)item;
+                        }
+                    }];
+                    
+                    hasExistsUrl = YES;
+                    *stop = YES;
+                }
+                
+            }];
+            
+            if (hasExistsUrl)
+            {
+                *stop = YES;
+            }
+            
+        }];
+    });
+}
+
 #pragma mark - sheet
 
 -(void)prepareBackgroundView {
@@ -73,24 +116,24 @@
     [self.view insertSubview:self.blurView atIndex:0];
 }
 
--(void)addSheetView {
-    // 1- Init bottomSheetVC
-    UINavigationController *vc = [[UIStoryboard storyboardWithName:@"MainInterface" bundle:nil] instantiateViewControllerWithIdentifier:@"BottomSheetNavigationController"];
-    vc.view.layer.cornerRadius = 8;
-    vc.view.clipsToBounds = YES;
-    // 2- Add bottomSheetVC as a child view
-    [self addChildViewController:vc];
-    [self.view addSubview:vc.view];
-    
-    [vc didMoveToParentViewController:self];
-    
-    // 3- Adjust bottomSheet frame and initial position.
-    CGFloat H = self.view.frame.size.height;
-    CGFloat W  = self.view.frame.size.width;
-    CGFloat h = 400;
-    CGFloat w  = 270;
-    vc.view.frame = CGRectMake((W-w)/2.0, (H-h)/2.0, w, h);
-}
+//-(void)addSheetView {
+//    // 1- Init bottomSheetVC
+//    UINavigationController *vc = [[UIStoryboard storyboardWithName:@"MainInterface" bundle:nil] instantiateViewControllerWithIdentifier:@"BottomSheetNavigationController"];
+//    vc.view.layer.cornerRadius = 8;
+//    vc.view.clipsToBounds = YES;
+//    // 2- Add bottomSheetVC as a child view
+//    [self addChildViewController:vc];
+//    [self.view addSubview:vc.view];
+//    
+//    [vc didMoveToParentViewController:self];
+//    
+//    // 3- Adjust bottomSheet frame and initial position.
+//    CGFloat H = self.view.frame.size.height;
+//    CGFloat W  = self.view.frame.size.width;
+//    CGFloat h = 400;
+//    CGFloat w  = 270;
+//    vc.view.frame = CGRectMake((W-w)/2.0, (H-h)/2.0, w, h);
+//}
 
 #pragma mark - UIViewControllerTransitioningDelegate
 
